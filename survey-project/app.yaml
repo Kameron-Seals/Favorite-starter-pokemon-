@@ -1,0 +1,14 @@
+runtime: nodejs18  # or nodejs16 if you prefer
+
+entrypoint: npm start
+
+instance_class: F2
+
+env_variables:
+  NODE_ENV: 'production'
+
+handlers:
+  - url: /static
+    static_dir: public/
+  - url: /.* 
+    script: auto
