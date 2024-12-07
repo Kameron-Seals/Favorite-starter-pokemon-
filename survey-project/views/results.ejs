@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Results</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+
+</head>
+<body>
+    <h1>Survey Results</h1>
+    <div class="chart-container">
+        <h2>Favorite Pokémon</h2>
+        <canvas id="favoriteChart"></canvas>
+        <div id="favoriteLegend" class="chart-legend"></div>
+    </div>
+    <div class="chart-container">
+        <h2>Least Favorite Pokémon</h2>
+        <canvas id="leastFavoriteChart"></canvas>
+        <div id="leastFavoriteLegend" class="chart-legend"></div>
+    </div>
+
+    <h2>Top 3 Favorite Pokémon</h2>
+    <div class="top-pokemon">
+        <div class="top-pokemon">
+            <% 
+                const sortedFavorites = Object.entries(favoriteCounts)
+                    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])); // Sort by votes and alphabetically
+    
+                // We will capture only the top 3 and handle ties
+                const top3Favorites = [];
+                let lastVoteCount = null;
+    
+                // Loop through sorted data and fill top 3
+                for (let i = 0; i < sortedFavorites.length; i++) {
+                    if (top3Favorites.length < 3) {
+                        top3Favorites.push(sortedFavorites[i]);
+                        lastVoteCount = sortedFavorites[i][1];
+                    } else if (sortedFavorites[i][1] === lastVoteCount) {
+                        top3Favorites.push(sortedFavorites[i]);
+                    } else {
+                        break;
+                    }
+                }
+            %>
+    
+            <% top3Favorites.forEach(([pokemon, count]) => { %>
+                <div class="pokemon-sprite">
+                    <img src="/sprites/<%= pokemon %>.png" alt="<%= pokemon %>">
+                    <p><%= pokemon %>: <%= count %> votes</p>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <!-- Display Top 3 Least Favorite Pokémon -->
+    <h2>Top 3 Least Favorite Pokémon</h2>
+    <div class="top-pokemon">
+         <div class="top-pokemon">
+        <% 
+            const sortedLeastFavorites = Object.entries(leastFavoriteCounts)
+                .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])); // Sort by votes and alphabetically
+
+            // We will capture only the top 3 and handle ties
+            const top3LeastFavorites = [];
+            let lastLeastVoteCount = null;
+
+            // Loop through sorted data and fill top 3
+            for (let i = 0; i < sortedLeastFavorites.length; i++) {
+                if (top3LeastFavorites.length < 3) {
+                    top3LeastFavorites.push(sortedLeastFavorites[i]);
+                    lastLeastVoteCount = sortedLeastFavorites[i][1];
+                } else if (sortedLeastFavorites[i][1] === lastLeastVoteCount) {
+                    top3LeastFavorites.push(sortedLeastFavorites[i]);
+                } else {
+                    break;
+                }
+            }
+        %>
+
+        <% top3LeastFavorites.forEach(([pokemon, count]) => { %>
+            <div class="pokemon-sprite">
+                <img src="/sprites/<%= pokemon %>.png" alt="<%= pokemon %>">
+                <p><%= pokemon %>: <%= count %> votes</p>
+            </div>
+        <% }) %>Z
+    </div>
+
+    <script>
+        // All Pokémon options with types
+        const allPokemon = [
+            { name: "Bulbasaur", type: "Grass" }, 
+            { name: "Charmander", type: "Fire" }, 
+            { name: "Squirtle", type: "Water" }, 
+            { name: "Chikorita", type: "Grass" }, 
+            { name: "Cyndaquil", type: "Fire" }, 
+            { name: "Totodile", type: "Water" },
+            { name: "Treecko", type: "Grass" }, 
+            { name: "Torchic", type: "Fire" }, 
+            { name: "Mudkip", type: "Water" }, 
+            { name: "Turtwig", type: "Grass" }, 
+            { name: "Chimchar", type: "Fire" }, 
+            { name: "Piplup", type: "Water" },
+            { name: "Snivy", type: "Grass" }, 
+            { name: "Tepig", type: "Fire" }, 
+            { name: "Oshawott", type: "Water" },
+            { name: "Chespin", type: "Grass" }, 
+            { name: "Fennekin", type: "Fire" }, 
+            { name: "Froakie", type: "Water" },
+            { name: "Grookey", type: "Grass" }, 
+            { name: "Scorbunny", type: "Fire" }, 
+            { name: "Sobble", type: "Water" },
+            { name: "Rowlet", type: "Grass" }, 
+            { name: "Litten", type: "Fire" }, 
+            { name: "Popplio", type: "Water" },
+            { name: "Sprigatito", type: "Grass" }, 
+            { name: "Fuecoco", type: "Fire" }, 
+            { name: "Quaxly", type: "Water" },
+            { name: "Pikachu", type: "Electric" },
+            { name: "Eevee", type: "Normal" }
+        ];
+
+        // Data passed from server
+        const favoriteCounts = <%- JSON.stringify(favoriteCounts) %>;
+        const leastFavoriteCounts = <%- JSON.stringify(leastFavoriteCounts) %>;
+
+        // Group Pokémon by type
+        const groupedByType = {
+            Fire: [],
+            Grass: [],
+            Water: [],
+            Pikachu: [],
+            Eevee: []
+        };
+
+        allPokemon.forEach(pokemon => {
+            if (pokemon.type === "Electric") {
+                groupedByType.Pikachu.push(pokemon.name);
+            } else if (pokemon.type === "Normal") {
+                groupedByType.Eevee.push(pokemon.name);
+            } else {
+                groupedByType[pokemon.type].push(pokemon.name);
+            }
+        });
+
+        // Create complete chart data with all Pokémon
+        const completeChartData = (counts) => {
+            const data = {};
+            allPokemon.forEach(pokemon => {
+                data[pokemon.name] = counts[pokemon.name] || 0; // Use 0 if the Pokémon has no votes
+            });
+            return {
+                labels: Object.keys(data),
+                datasets: [{
+                    data: Object.values(data),
+                    backgroundColor: generateColors(),
+                    hoverBackgroundColor: generateColors()
+                }]
+            };
+        };
+
+        // Color mapping function
+        function generateColors() {
+            const colors = {
+                Fire: '#FF6347', 
+                Water: '#1E90FF', 
+                Grass: '#32CD32', 
+                Electric: '#FFD700', 
+                Normal: '#D2B48C'
+            };
+
+            return allPokemon.map(pokemon => {
+                if (pokemon.type === "Fire") return colors.Fire;
+                if (pokemon.type === "Water") return colors.Water;
+                if (pokemon.type === "Grass") return colors.Grass;
+                if (pokemon.name === "Pikachu") return colors.Electric;
+                if (pokemon.name === "Eevee") return colors.Normal;
+                return '#808080'; // Default gray for untyped or unknown Pokémon
+            });
+        }
+
+        const renderChart = (ctx, counts, legendId) => {
+            const chartData = completeChartData(counts);
+            const chart = new Chart(ctx, {
+                type: 'pie',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false // Hide default legend
+                        }
+                    }
+                }
+            });
+
+            // Generate custom legend
+            const legendContainer = document.getElementById(legendId);
+            Object.keys(groupedByType).forEach(type => {
+                const groupDiv = document.createElement('div');
+                groupDiv.classList.add('legend-group');
+                groupDiv.innerHTML = `<strong>${type}</strong>`;
+                groupedByType[type].forEach(pokemon => {
+                    const legendItem = document.createElement('div');
+                    legendItem.classList.add('legend-item');
+                    const index = chartData.labels.indexOf(pokemon);
+                    const color = chartData.datasets[0].backgroundColor[index];
+                    legendItem.innerHTML = `
+                        <span style="background-color: ${color}"></span>
+                        ${pokemon}: ${chartData.datasets[0].data[index]}
+                    `;
+                    groupDiv.appendChild(legendItem);
+                });
+                legendContainer.appendChild(groupDiv);
+            });
+        };
+
+        // Render Favorite Chart
+        renderChart(
+            document.getElementById('favoriteChart').getContext('2d'),
+            favoriteCounts,
+            'favoriteLegend'
+        );
+
+        // Render Least Favorite Chart
+        renderChart(
+            document.getElementById('leastFavoriteChart').getContext('2d'),
+            leastFavoriteCounts,
+            'leastFavoriteLegend'
+        );
+    </script>
+</body>
+</html>
