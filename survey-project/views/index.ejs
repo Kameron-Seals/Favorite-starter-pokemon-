@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorite Starter Pokemon</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <!-- Page Title -->
     <h1 id="title">Favorite Starter Pokemon Survey</h1>
+    <!-- Page Description -->
     <p id="description">Choose your favorite and least favorite starter Pokémon!</p>
 
+    <!-- Form Section -->
     <form method="post" action="/results">
-        <!-- Favorite Starter Pokémon -->
+        <!-- Favorite Starter Pokémon Dropdown -->
         <label for="favorite">Favorite Starter Pokémon:</label>
         <select id="favorite" name="favorite" required>
+            <!-- Placeholder Option -->
             <option value="">(select one)</option>
+            <!-- Starter Pokémon Options -->
             <option value="Bulbasaur">Bulbasaur</option>
             <option value="Charmander">Charmander</option>
             <option value="Squirtle">Squirtle</option>
@@ -46,10 +53,12 @@
             <option value="Eevee">Eevee</option>
         </select>
 
-        <!-- Least Favorite Starter Pokémon -->
+        <!-- Least Favorite Starter Pokémon Dropdown -->
         <label for="leastFavorite">Least Favorite Starter Pokémon:</label>
         <select id="leastFavorite" name="leastFavorite" required>
+            <!-- Placeholder Option -->
             <option value="">(select one)</option>
+            <!-- Starter Pokémon Options -->
             <option value="Bulbasaur">Bulbasaur</option>
             <option value="Charmander">Charmander</option>
             <option value="Squirtle">Squirtle</option>
@@ -81,6 +90,7 @@
             <option value="Eevee">Eevee</option>
         </select>
 
+        <!-- Submit Button -->
         <input type="submit" value="Submit">
     </form>
 </body>
