@@ -16,7 +16,7 @@ This project includes a web-based survey to gather data on people's favorite sta
 6. ~~Integrate the top 3 display into the same stylesheet format as the form and legend.~~
 7. Continue developing this project as a stepping stone for tackling larger scopes of work.
 8. Add sprites next to options on index page 
-
+9. gcloude console on mobile is not letting me push through my reset command look into that.
 ## Technologies Used
 
 - HTML
