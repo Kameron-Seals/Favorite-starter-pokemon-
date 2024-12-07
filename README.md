@@ -15,6 +15,7 @@ This project includes a web-based survey to gather data on people's favorite sta
 5. ~~Improve logic for displaying the top 3 Pokémon in a more organized manner.~~
 6. ~~Integrate the top 3 display into the same stylesheet format as the form and legend.~~
 7. Continue developing this project as a stepping stone for tackling larger scopes of work.
+8. Add sprites next to options on index page 
 
 ## Technologies Used
 
