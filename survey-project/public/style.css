@@ -1,0 +1,198 @@
+body {
+  min-width: 900px;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(115deg, rgba(0, 245, 255, 0.4), rgba(120, 95, 212, 0.5)),
+                    url(https://images5.alphacoders.com/389/389247.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  color: black;
+  min-height: 100%;
+  height: auto;
+}
+
+label {
+  display: block;
+  margin: .5rem 0;
+}
+
+form {
+  background: rgba(27, 27, 50, 0.8);
+  padding: 2rem 10.625rem;
+  border-radius: 1.25rem;
+  display: block;
+  color: white;
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+input, select, textarea {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: rgba(27, 27, 50, 0.8);
+  border-color: white;
+  color: white;
+}
+
+input[type="submit"] {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+canvas {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  font-size: 0.9em;
+  max-width: 700px;
+  overflow: auto;
+  max-height: 400px;
+  border: 2px solid white; /* Add a border similar to the form */
+  border-radius: 1.25rem; /* Rounded corners to match the form */
+  padding: 20px; /* Padding to create space between the content and the border */
+  background-color: rgba(27, 27, 50, 0.8); /* Add a background color similar to the form */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+body {
+  min-width: 900px;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(115deg, rgba(0, 245, 255, 0.4), rgba(120, 95, 212, 0.5)),
+                    url(https://images5.alphacoders.com/389/389247.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  color: black;
+  min-height: 100%;
+  height: auto;
+}
+
+label {
+  display: block;
+  margin: .5rem 0;
+}
+
+form {
+  background: rgba(27, 27, 50, 0.8);
+  padding: 2rem 10.625rem;
+  border-radius: 1.25rem;
+  display: block;
+  color: white;
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+input, select, textarea {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: rgba(27, 27, 50, 0.8);
+  border-color: white;
+  color: white;
+}
+
+input[type="submit"] {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+canvas {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  font-size: 0.9em;
+  max-width: 700px;
+  overflow: auto;
+  max-height: 400px;
+  border: 2px solid white; /* Add a border similar to the form */
+  border-radius: 1.25rem; /* Rounded corners to match the form */
+  padding: 20px; /* Padding to create space between the content and the border */
+  background-color: rgba(27, 27, 50, 0.8); /* Add a background color similar to the form */
+}
+
+.chart-legend .legend-item {
+  color: #ffffff; /* Change this to the desired font color */
+  font-size: 1.2em; /* Adjust the font size if needed */
+}
+
+.chart-legend .legend-item span {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.legend-item span {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-block;
+}
