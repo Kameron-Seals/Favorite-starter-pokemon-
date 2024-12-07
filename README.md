@@ -1,13 +1,34 @@
-# Favorite-starter-pokemon-
-.Favorite starter Pokémon (will include website that actually is pushed through using google cloud console)
-The data in this will not work on a static repository system like Github Had to push it through goole cloud but wanted the back and front end code to be accessible for myself for reivew in the future
+# Favorite Starter Pokémon
 
+Favorite starter Pokémon (website hosted through Google Cloud Console). The data in this project will not work on a static repository system like GitHub; it is pushed through Google Cloud but the backend and frontend code are accessible for future review.
 
-Things I want to add
-1.treemap
-2.Fix the logic surrounding the results.ejs on the calculating the top 3 favorte and least favorite
-3. make a custom domain name which ill have to pay for unfortunatley but will be easier to present as something im hosting myself (since I literaly controle the whole consloe through my google cloud terminal)
-4 Make a siter project with all 1000+ pokemon and other ways to interact( maybe a fourm page that limits up to 20 different threads with about 200-300 post limit)
-5. If i do go the forum route being able to display top 3 in a more logic oriented way would help tremendously
-6. Once i fix the logic surronding the top 3 add it to the same stylesheet format as the form and legend
-7. move on, this is a fun project but honestly a better stepping stone to tackle bigger scopes of work.
+## Project Description
+
+This project includes a web-based survey to gather data on people's favorite starter Pokémon. The website is built with HTML, CSS, Node.js, Express, and JavaScript, and hosted on Google Cloud Console.
+
+## Planned Improvements
+
+1. Add a treemap visualization.
+2. Fix the logic in `results.ejs` to accurately calculate the top 3 favorite and least favorite Pokémon.
+3. Obtain a custom domain name to enhance presentation.
+4. Create a sister project with all 1000+ Pokémon and interactive features (e.g., a forum page with up to 20 threads and a 200-300 post limit).
+5. Improve logic for displaying the top 3 Pokémon in a more organized manner.
+6. Integrate the top 3 display into the same stylesheet format as the form and legend.
+7. Continue developing this project as a stepping stone for tackling larger scopes of work.
+
+## Technologies Used
+
+- HTML
+- CSS
+- Node.js
+- Express
+- JavaScript
+- Google Cloud Console
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Project Link
+
+[Favorite Starter Pokémon](https://my-project-1-443823.ue.r.appspot.com/)
