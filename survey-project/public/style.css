@@ -1,198 +1,164 @@
+/* General body styles */
 body {
-  min-width: 900px;
-  height: 100vh;
-  margin: 0;
+  min-width: 900px; /* Ensure a minimum width for the page */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
   background-image: linear-gradient(115deg, rgba(0, 245, 255, 0.4), rgba(120, 95, 212, 0.5)),
-                    url(https://images5.alphacoders.com/389/389247.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4;
-  text-align: center;
-  color: black;
-  min-height: 100%;
-  height: auto;
+                    url(https://images5.alphacoders.com/389/389247.png); /* Gradient overlaid on background image */
+  background-size: cover; /* Cover the entire background area */
+  background-repeat: no-repeat; /* Prevent background repetition */
+  background-attachment: fixed; /* Fix background on scroll */
+  background-position: center; /* Center the background image */
+  font-family: 'Poppins', sans-serif; /* Primary font for the page */
+  font-size: 1rem; /* Base font size */
+  font-weight: 400; /* Normal font weight */
+  line-height: 1.4; /* Line height for readability */
+  text-align: center; /* Center text alignment */
+  color: black; /* Default text color */
+  min-height: 100%; /* Ensure minimum height */
+  height: auto; /* Allow height to adjust automatically */
 }
 
+/* Label styles */
 label {
-  display: block;
-  margin: .5rem 0;
+  display: block; /* Ensure each label is on a new line */
+  margin: 0.5rem 0; /* Add spacing above and below labels */
 }
 
+/* Form styles */
 form {
-  background: rgba(27, 27, 50, 0.8);
-  padding: 2rem 10.625rem;
-  border-radius: 1.25rem;
-  display: block;
-  color: white;
-  width: 60vw;
-  max-width: 500px;
-  min-width: 300px;
-  margin: 0 auto;
-  padding-bottom: 2em;
-  font-size: 1.6rem;
-  text-align: left;
+  background: rgba(27, 27, 50, 0.8); /* Semi-transparent dark background */
+  padding: 2rem 10.625rem; /* Padding around form content */
+  border-radius: 1.25rem; /* Rounded corners for form */
+  display: block; /* Block display for layout */
+  color: white; /* White text for contrast */
+  width: 60vw; /* Set width relative to the viewport */
+  max-width: 500px; /* Maximum width limit */
+  min-width: 300px; /* Minimum width limit */
+  margin: 0 auto; /* Center form horizontally */
+  padding-bottom: 2em; /* Additional padding at the bottom */
+  font-size: 1.6rem; /* Larger font for form text */
+  text-align: left; /* Align text to the left */
 }
 
+/* Input, select, and textarea styles */
 input, select, textarea {
-  display: block;
-  width: 60%;
-  margin: 1em auto;
-  height: 2em;
-  font-size: 1.1rem;
-  background-color: rgba(27, 27, 50, 0.8);
-  border-color: white;
-  color: white;
+  display: block; /* Ensure each element is on a new line */
+  width: 60%; /* Set width relative to parent container */
+  margin: 1em auto; /* Center element with spacing */
+  height: 2em; /* Set uniform height */
+  font-size: 1.1rem; /* Adjust font size */
+  background-color: rgba(27, 27, 50, 0.8); /* Match form background */
+  border-color: white; /* White border for visibility */
+  color: white; /* White text color */
 }
 
+/* Submit button styles */
 input[type="submit"] {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Increase font size for emphasis */
 }
 
+/* Header styles */
 h1 {
-  font-size: 2em;
-  margin-bottom: 40px;
+  font-size: 2em; /* Increase header size */
+  margin-bottom: 40px; /* Add spacing below header */
 }
 
+/* Canvas styles */
 canvas {
-  max-width: 700px;
-  margin: 20px auto;
+  max-width: 700px; /* Limit canvas width */
+  margin: 20px auto; /* Center canvas with spacing */
 }
 
+/* Chart container styles */
 .chart-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  display: flex; /* Use Flexbox for alignment */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center-align children */
+  width: 100%; /* Full width */
 }
 
+/* Chart legend styles */
 .chart-legend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-  font-size: 0.9em;
-  max-width: 700px;
-  overflow: auto;
-  max-height: 400px;
-  border: 2px solid white; /* Add a border similar to the form */
-  border-radius: 1.25rem; /* Rounded corners to match the form */
-  padding: 20px; /* Padding to create space between the content and the border */
-  background-color: rgba(27, 27, 50, 0.8); /* Add a background color similar to the form */
+  display: flex; /* Flex layout for legend items */
+  flex-wrap: wrap; /* Allow wrapping for better layout */
+  justify-content: center; /* Center align items */
+  gap: 15px; /* Space between items */
+  margin-top: 20px; /* Space above legend */
+  font-size: 0.9em; /* Smaller font for legend */
+  max-width: 700px; /* Limit maximum width */
+  overflow: auto; /* Allow scrolling if content overflows */
+  max-height: 400px; /* Set maximum height */
+  border: 2px solid white; /* Add a white border */
+  border-radius: 1.25rem; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  background-color: rgba(27, 27, 50, 0.8); /* Semi-transparent background */
 }
 
+/* Individual legend item styles */
 .legend-item {
-  display: flex;
-  align-items: center;
-}
-body {
-  min-width: 900px;
-  height: 100vh;
-  margin: 0;
-  background-image: linear-gradient(115deg, rgba(0, 245, 255, 0.4), rgba(120, 95, 212, 0.5)),
-                    url(https://images5.alphacoders.com/389/389247.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4;
-  text-align: center;
-  color: black;
-  min-height: 100%;
-  height: auto;
+  display: flex; /* Flex layout for alignment */
+  align-items: center; /* Vertically center items */
 }
 
-label {
-  display: block;
-  margin: .5rem 0;
-}
-
-form {
-  background: rgba(27, 27, 50, 0.8);
-  padding: 2rem 10.625rem;
-  border-radius: 1.25rem;
-  display: block;
-  color: white;
-  width: 60vw;
-  max-width: 500px;
-  min-width: 300px;
-  margin: 0 auto;
-  padding-bottom: 2em;
-  font-size: 1.6rem;
-  text-align: left;
-}
-
-input, select, textarea {
-  display: block;
-  width: 60%;
-  margin: 1em auto;
-  height: 2em;
-  font-size: 1.1rem;
-  background-color: rgba(27, 27, 50, 0.8);
-  border-color: white;
-  color: white;
-}
-
-input[type="submit"] {
-  font-size: 1.5rem;
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 40px;
-}
-
-canvas {
-  max-width: 700px;
-  margin: 20px auto;
-}
-
-.chart-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.chart-legend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-  font-size: 0.9em;
-  max-width: 700px;
-  overflow: auto;
-  max-height: 400px;
-  border: 2px solid white; /* Add a border similar to the form */
-  border-radius: 1.25rem; /* Rounded corners to match the form */
-  padding: 20px; /* Padding to create space between the content and the border */
-  background-color: rgba(27, 27, 50, 0.8); /* Add a background color similar to the form */
-}
-
-.chart-legend .legend-item {
-  color: #ffffff; /* Change this to the desired font color */
-  font-size: 1.2em; /* Adjust the font size if needed */
-}
-
-.chart-legend .legend-item span {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  display: inline-block;
-}
-
+/* Legend item bullet styles */
 .legend-item span {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  display: inline-block;
+  width: 20px; /* Fixed width for bullets */
+  height: 20px; /* Fixed height for bullets */
+  margin-right: 10px; /* Space between bullet and text */
+  display: inline-block; /* Ensure inline-block display */
+}
+
+/* Top Pokémon container styles */
+.top-pokemon-container {
+  display: flex; /* Horizontal alignment */
+  justify-content: center; /* Center-align items */
+  align-items: center; /* Vertically align items */
+  gap: 10px; /* Space between Pokémon */
+  margin: 0 auto; /* Center the container */
+  padding: 1px; /* Add padding inside container */
+  background-color: #fffacd; /* Light yellow background */
+  border: 2px solid #FFD700; /* Golden border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: fit-content; /* Adjust container width dynamically */
+}
+
+/* Individual top Pokémon styles */
+.top-pokemon {
+  padding: 1px 10px; /* Padding inside each Pokémon block */
+  background-color: #fff; /* White background for Pokémon block */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 15px; /* Rounded corners */
+  text-align: center; /* Center-align text */
+  font-family: 'Arial', sans-serif; /* Consistent font */
+  font-size: 14px; /* Adjusted font size */
+}
+
+/* Hover effect for top Pokémon */
+.top-pokemon:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+/* Pokémon type-specific styles */
+.fire {
+  background-color: #FF6347; /* Fire type background color */
+  color: #fff; /* White text for contrast */
+}
+
+.water {
+  background-color: #1E90FF; /* Water type background color */
+  color: #fff; /* White text for contrast */
+}
+
+.grass {
+  background-color: #32CD32; /* Grass type background color */
+  color: #fff; /* White text for contrast */
+}
+
+.normal {
+  background-color: #D3D3D3; /* Normal type background color */
+  color: #000; /* Black text for contrast */
 }
