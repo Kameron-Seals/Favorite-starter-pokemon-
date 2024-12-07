@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Starter Pokemon</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 id="title">Favorite Starter Pokemon Survey</h1>
+    <p id="description">Choose your favorite and least favorite starter Pokémon!</p>
+
+    <form method="post" action="/results">
+        <!-- Favorite Starter Pokémon -->
+        <label for="favorite">Favorite Starter Pokémon:</label>
+        <select id="favorite" name="favorite" required>
+            <option value="">(select one)</option>
+            <option value="Bulbasaur">Bulbasaur</option>
+            <option value="Charmander">Charmander</option>
+            <option value="Squirtle">Squirtle</option>
+            <option value="Chikorita">Chikorita</option>
+            <option value="Cyndaquil">Cyndaquil</option>
+            <option value="Totodile">Totodile</option>
+            <option value="Treecko">Treecko</option>
+            <option value="Torchic">Torchic</option>
+            <option value="Mudkip">Mudkip</option>
+            <option value="Turtwig">Turtwig</option>
+            <option value="Chimchar">Chimchar</option>
+            <option value="Piplup">Piplup</option>
+            <option value="Snivy">Snivy</option>
+            <option value="Tepig">Tepig</option>
+            <option value="Oshawott">Oshawott</option>
+            <option value="Chespin">Chespin</option>
+            <option value="Fennekin">Fennekin</option>
+            <option value="Froakie">Froakie</option>
+            <option value="Rowlet">Rowlet</option>
+            <option value="Litten">Litten</option>
+            <option value="Popplio">Popplio</option>
+            <option value="Grookey">Grookey</option>
+            <option value="Scorbunny">Scorbunny</option>
+            <option value="Sobble">Sobble</option>
+            <option value="Sprigatito">Sprigatito</option>
+            <option value="Fuecoco">Fuecoco</option>
+            <option value="Quaxly">Quaxly</option>
+            <option value="Pikachu">Pikachu</option>
+            <option value="Eevee">Eevee</option>
+        </select>
+
+        <!-- Least Favorite Starter Pokémon -->
+        <label for="leastFavorite">Least Favorite Starter Pokémon:</label>
+        <select id="leastFavorite" name="leastFavorite" required>
+            <option value="">(select one)</option>
+            <option value="Bulbasaur">Bulbasaur</option>
+            <option value="Charmander">Charmander</option>
+            <option value="Squirtle">Squirtle</option>
+            <option value="Chikorita">Chikorita</option>
+            <option value="Cyndaquil">Cyndaquil</option>
+            <option value="Totodile">Totodile</option>
+            <option value="Treecko">Treecko</option>
+            <option value="Torchic">Torchic</option>
+            <option value="Mudkip">Mudkip</option>
+            <option value="Turtwig">Turtwig</option>
+            <option value="Chimchar">Chimchar</option>
+            <option value="Piplup">Piplup</option>
+            <option value="Snivy">Snivy</option>
+            <option value="Tepig">Tepig</option>
+            <option value="Oshawott">Oshawott</option>
+            <option value="Chespin">Chespin</option>
+            <option value="Fennekin">Fennekin</option>
+            <option value="Froakie">Froakie</option>
+            <option value="Rowlet">Rowlet</option>
+            <option value="Litten">Litten</option>
+            <option value="Popplio">Popplio</option>
+            <option value="Grookey">Grookey</option>
+            <option value="Scorbunny">Scorbunny</option>
+            <option value="Sobble">Sobble</option>
+            <option value="Sprigatito">Sprigatito</option>
+            <option value="Fuecoco">Fuecoco</option>
+            <option value="Quaxly">Quaxly</option>
+            <option value="Pikachu">Pikachu</option>
+            <option value="Eevee">Eevee</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
