@@ -9,7 +9,7 @@ This project includes a web-based survey to gather data on people's favorite sta
 ## Planned Improvements
 
 1. Add a treemap visualization.
-2. Fix the logic in `results.ejs` to accurately calculate the top 3 favorite and least favorite Pokémon.
+2. ~~Fix the logic in `results.ejs` to accurately calculate the top 3 favorite and least favorite Pokémon.~~
 3. Obtain a custom domain name to enhance presentation.
 4. Create a sister project with all 1000+ Pokémon and interactive features (e.g., a forum page with up to 20 threads and a 200-300 post limit).
 5. Improve logic for displaying the top 3 Pokémon in a more organized manner.
